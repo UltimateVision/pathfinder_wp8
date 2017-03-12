@@ -1,0 +1,135 @@
+﻿<Page
+    x:Class="Pathfinder.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Pathfinder"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" d:DataContext="{d:DesignData /SampleData/AppStateSampleData.xaml}">
+    
+    <Page.BottomAppBar>
+        <CommandBar>
+            <CommandBar.PrimaryCommands>
+                <AppBarButton Label="Lock Azimuth"
+                              Click="LockAzimuthClick">
+                    <AppBarButton.Icon>
+                        <PathIcon HorizontalAlignment="Stretch"
+                                  VerticalAlignment="Stretch"
+                                  Data="M11.6684217453003,19.1692638397217L13.3352117538452,19.1692638397217 13.3352117538452,16.6690006256104 13.8591804504395,14.0736694335938 15.2880926132202,11.9543027877808 17.4074592590332,10.525390625 20.0027885437012,10.0014219284058 22.5981197357178,10.525390625 24.7174873352051,11.9543027877808 26.1464004516602,14.0736694335938 26.6703681945801,16.6690006256104 26.6703681945801,19.1692638397217 28.3373699188232,19.1692638397217 28.3374214172363,30.0042114257813 11.6684217453003,30.0042114257813 11.6684217453003,19.1692638397217z M24.1700534820557,16.6690006256104L23.8425712585449,15.0469093322754 22.9494934082031,13.7222967147827 21.6248817443848,12.8292207717896 20.0027885437012,12.5017375946045 18.3806972503662,12.8292207717896 17.0560855865479,13.7222967147827 16.1630096435547,15.0469093322754 15.8355264663696,16.6690006256104 15.8355264663696,19.1692638397217 24.1700019836426,19.1692638397217 24.1700534820557,16.6690006256104z" />
+                    </AppBarButton.Icon>
+                </AppBarButton>
+                <AppBarButton Label="Points"
+                              Click="CalculateAzimuthClick">
+                    <AppBarButton.Icon>
+                        <PathIcon HorizontalAlignment="Stretch"
+                                  VerticalAlignment="Stretch"
+                                  Data="M14.5833158493042,11.9736843109131L20.4166831970215,13.6403694152832 25.4166851043701,10.3070001602173 32.6315803527832,12.105263710022 32.6315803527832,27.3684215545654 25.4166851043701,25.5263175964355 20.4166316986084,28.8596324920654 14.5833158493042,27.193000793457 8.42105293273926,29.7368431091309 8.42105293273926,14.4736843109131 14.5833158493042,11.9736843109131z M14.5833158493042,24.693000793457L20.548210144043,26.2281074523926 25.548210144043,22.8947372436523 30.5263175964355,24.3421058654785 30.5263175964355,14.2105264663696 25.4166316986084,12.807053565979 20.4166316986084,16.2719478607178 14.5833158493042,14.6053161621094 10.5263156890869,16.184211730957 10.5263156890869,26.3157901763916 14.5833158493042,24.693000793457z M29.3421058654785,21.5789489746094L27.9111595153809,21.5789489746094 26.8808441162109,19.5124740600586 26.8655815124512,19.5124740600586 26.7061004638672,19.8772239685059 26.3959445953369,20.4813365936279 25.8164749145508,21.5789489746094 24.3796844482422,21.5789489746094 26.0855274200439,18.9473686218262 24.5300540924072,16.3157901763916 25.9950523376465,16.3157901763916 26.9184741973877,18.3376312255859 26.9337368011475,18.3376312255859 27.1025924682617,17.9506912231445 27.3984966278076,17.3625297546387 27.9405288696289,16.3157901763916 29.2668972015381,16.3157901763916 27.6914749145508,18.9250526428223 29.3421058654785,21.5789489746094z M12.3684215545654,21.0526313781738L12.9266586303711,21.2838687896729 13.1578950881958,21.8421058654785 12.9266586303711,22.4003429412842 12.3684215545654,22.6315803527832 11.8101844787598,22.4003429412842 11.5789480209351,21.8421058654785 11.8101844787598,21.2838687896729 12.3684215545654,21.0526313781738z M13.4210529327393,18.4210529327393L13.9792900085449,18.6522903442383 14.2105264663696,19.2105274200439 13.9792900085449,19.768762588501 13.4210529327393,20 12.8628158569336,19.768762588501 12.6315793991089,19.2105274200439 12.8628158569336,18.6522903442383 13.4210529327393,18.4210529327393z M16.0526313781738,17.8947372436523L16.6108684539795,18.1259746551514 16.8421058654785,18.684211730957 16.6108684539795,19.2424468994141 16.0526313781738,19.4736843109131 15.4943952560425,19.2424468994141 15.2631587982178,18.684211730957 15.4943952560425,18.1259746551514 16.0526313781738,17.8947372436523z M17.6315803527832,20L18.1898155212402,20.231237411499 18.4210529327393,20.7894744873047 18.1898155212402,21.3477115631104 17.6315803527832,21.5789489746094 17.0733432769775,21.3477115631104 16.8421058654785,20.7894744873047 17.0733432769775,20.231237411499 17.6315803527832,20z M19.7368431091309,21.5789489746094L20.2950782775879,21.8101863861084 20.5263156890869,22.3684215545654 20.2950782775879,22.9266586303711 19.7368431091309,23.1578960418701 19.1786060333252,22.9266586303711 18.9473686218262,22.3684215545654 19.1786060333252,21.8101863861084 19.7368431091309,21.5789489746094z M23.4210529327393,18.4210529327393L23.9792900085449,18.6522903442383 24.2105274200439,19.2105274200439 23.9792900085449,19.768762588501 23.4210529327393,20 22.8628177642822,19.768762588501 22.6315803527832,19.2105274200439 22.8628177642822,18.6522903442383 23.4210529327393,18.4210529327393z M21.3157901763916,19.4736843109131L21.8740272521973,19.7049217224121 22.1052646636963,20.2631587982178 21.8740272521973,20.8213939666748 21.3157901763916,21.0526313781738 20.7575531005859,20.8213939666748 20.5263156890869,20.2631587982178 20.7575531005859,19.7049217224121 21.3157901763916,19.4736843109131z" />
+                    </AppBarButton.Icon>
+                </AppBarButton>
+                <AppBarButton Label="Go Home"
+                              Click="NavigateHomeClick">
+                    <AppBarButton.Icon>
+                        <PathIcon HorizontalAlignment="Stretch"
+                                  VerticalAlignment="Stretch"
+                                  Data="M26.3188972473145,25.7927913665771L27.8075351715088,26.4093971252441 28.4241600036621,27.8980541229248 27.8075351715088,29.3866920471191 26.3188972473145,30.0033187866211 24.8302383422852,29.3866920471191 24.2136325836182,27.8980541229248 24.8302383422852,26.4093971252441 26.3188972473145,25.7927913665771z M26.3188972473145,23.1612129211426L28.1626758575439,23.5334548950195 29.6683368682861,24.5485954284668 30.6834888458252,26.0542545318604 31.0557384490967,27.8980541229248 30.6834888458252,29.7418327331543 29.6683368682861,31.2474937438965 28.1626758575439,32.2626457214355 26.3188972473145,32.634895324707 24.4750957489014,32.2626457214355 22.9694366455078,31.2474937438965 21.9542961120605,29.7418327331543 21.5820541381836,27.8980541229248 21.9542961120605,26.0542545318604 22.9694366455078,24.5485954284668 24.4750957489014,23.5334548950195 26.3188972473145,23.1612129211426z M26.3188972473145,24.7401599884033L25.0896816253662,24.9883232116699 24.0859088897705,25.6650867462158 23.4091567993164,26.6688613891602 23.1610012054443,27.8980541229248 23.4091644287109,29.1272468566895 24.0859279632568,30.1310214996338 25.0897026062012,30.8077869415283 26.3188972473145,31.0559501647949 27.5480899810791,30.8077869415283 28.5518627166748,30.1310214996338 29.2286281585693,29.1272468566895 29.4767913818359,27.8980541229248 29.2286281585693,26.6688613891602 28.5518627166748,25.6650867462158 27.5480899810791,24.9883232116699 26.3188972473145,24.7401599884033z M12.1070003509521,28.9514751434326L12.1070003509521,19.4764728546143 11.0542631149292,20.5292644500732 9.47510623931885,17.8973178863525 19.4764728546143,10.0014743804932 23.1612129211426,12.9104738235474 23.1612129211426,10.9226322174072 25.2667388916016,10.5278425216675 25.2667388916016,14.5727376937866 29.4778442382813,17.8973178863525 27.8986854553223,20.5292644500732 26.8459491729736,19.4764728546143 26.8459491729736,22.1321048736572 26.3195266723633,22.1084747314453 25.2667388916016,22.2039489746094 25.2667388916016,18.4236850738525 19.4764728546143,13.6423692703247 13.6862106323242,18.4236850738525 13.6862106323242,27.3723163604736 16.8445262908936,27.3723163604736 16.8445262908936,21.5821056365967 22.1084213256836,21.5821056365967 22.1084213256836,23.9246311187744 20.9517192840576,25.7235813140869 20.5292644500732,27.8987922668457 20.6247367858887,28.9514751434326 12.1070003509521,28.9514751434326z" />
+                    </AppBarButton.Icon>
+                </AppBarButton>
+            </CommandBar.PrimaryCommands>
+            <CommandBar.SecondaryCommands>
+                <AppBarButton Label="Release Azimuth" Click="ReleaseAzimuthClick" />
+                <AppBarButton Label="Mark as home" Click="SetHomeClick"/>
+                <AppBarButton Label="Settings" Click="SettingsButton_OnClick"/>
+            </CommandBar.SecondaryCommands>
+        </CommandBar>
+    </Page.BottomAppBar>
+    <Grid>
+        <Pivot>
+            <PivotItem Margin="0">
+                <StackPanel>
+                    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <TextBlock Name="MagneticNorthHeading" FontFamily="Segoe UI" FontSize="40" HorizontalAlignment="Center" Margin="0 0 0 10">???</TextBlock>
+                        <Canvas Width="400" Height="20">
+                            <Polygon Points="190,0 210,0 200,15" Fill="Red"></Polygon>
+                        </Canvas>
+                        <Grid>
+                            <Image Name="CompassRose" 
+                           Source="Images/compass_rose.png" 
+                           Height="400"
+                           RenderTransformOrigin="0.5, 0.5"></Image>
+                            <Canvas Height="400" 
+                            RenderTransformOrigin="0.5, 0.5"
+                            Name="CompassNeedle">
+                                <Polygon Points="200,60 190,340 210,340" 
+                                 Stroke="Red" 
+                                 Fill="Red">
+                                </Polygon>
+                            </Canvas>
+                        </Grid>
+                        <TextBlock HorizontalAlignment="Right" 
+                           Foreground="DarkGray" 
+                           Margin="0 0 5 0"
+                           Name="AccurracyTB">Acc</TextBlock>
+                        <TextBlock HorizontalAlignment="Right" 
+                           Foreground="DarkGray" 
+                           Margin="0 0 5 0"
+                           Name="DiffTrueMag">Diff</TextBlock>
+                    </StackPanel>
+                    <StackPanel>
+                        <Grid Name="LatLonGrid">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <TextBlock Grid.Row="0" Grid.Column="0" Margin="5 0 5 0" FontSize="20">Latitude:</TextBlock>
+                            <TextBlock Grid.Row="0" Grid.Column="1" Name="LatitudeTB" FontSize="20">???</TextBlock>
+                            <TextBlock Grid.Row="1" Grid.Column="0" Margin="5 0 5 0" FontSize="20">Longitude:</TextBlock>
+                            <TextBlock Grid.Row="1" Grid.Column="1" Name="LongitudeTB" FontSize="20">???</TextBlock>
+                        </Grid>
+                        <Grid Name="DistanceGrid" Visibility="Collapsed">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <TextBlock Grid.Row="0" Grid.Column="0" Margin="5 0 5 0" FontSize="20">Distance:</TextBlock>
+                            <TextBlock Grid.Row="0" Grid.Column="1" Name="DistanceBox" FontSize="20">???</TextBlock>
+                            <TextBlock Grid.Row="1" Grid.Column="0" Margin="5 0 5 0" FontSize="20">Accurracy:</TextBlock>
+                            <TextBlock Grid.Row="1" Grid.Column="1" Name="GpsAccurracyBlock" FontSize="20">???</TextBlock>
+                        </Grid>
+                    </StackPanel>
+                </StackPanel>
+            </PivotItem>
+        </Pivot>
+        <Popup VerticalOffset="100" HorizontalOffset="10" Name="PointPopup">
+            <Border BorderBrush="{StaticResource ApplicationForegroundThemeBrush}" 
+                                Background="{StaticResource ApplicationPageBackgroundThemeBrush}"
+                                BorderThickness="2" Width="380" Height="290">
+                <StackPanel Margin="5">
+                    <TextBlock>Position (N;E deg min sec):</TextBlock>
+                    <TextBox Name="PointCoordinatesTextBox" />
+                    <TextBlock>Format:</TextBlock>
+                    <StackPanel Orientation="Horizontal">
+                        <RadioButton Name="DegMinFormatRB" GroupName="CoordFormat" IsChecked="True">x x.x</RadioButton>
+                        <RadioButton Name="DegFormatRB" GroupName="CoordFormat">x.x</RadioButton>
+                    </StackPanel>
+                    <TextBlock>Title:</TextBlock>
+                    <TextBox Name="PointDescriptionTextBox" />
+                    <StackPanel Orientation="Horizontal"
+                                HorizontalAlignment="Center">
+                        <Button Click="SetTargetClick" Margin="0 0 10 0">Set</Button>
+                        <Button Click="AddPointClick" Margin="0 0 10 0">Add</Button>
+                        <Button HorizontalAlignment="Center" Click="ClosePointPopup">Cancel</Button>
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+        </Popup>
+    </Grid>
+</Page>

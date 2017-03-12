@@ -1,0 +1,113 @@
+﻿<Page
+    x:Class="Pathfinder.Views.CacheList"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Pathfinder.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    d:DataContext="{d:DesignData /SampleData/AppStateSampleData.xaml}">
+
+    <Page.BottomAppBar>
+        <CommandBar>
+            <CommandBar.PrimaryCommands>
+                <AppBarButton Label="Calculate Azimuth"
+                              Click="CalculateAzimuthClick">
+                    <AppBarButton.Icon>
+                        <PathIcon HorizontalAlignment="Stretch"
+                                  VerticalAlignment="Stretch"
+                                  Data="M14.5833158493042,11.9736843109131L20.4166831970215,13.6403694152832 25.4166851043701,10.3070001602173 32.6315803527832,12.105263710022 32.6315803527832,27.3684215545654 25.4166851043701,25.5263175964355 20.4166316986084,28.8596324920654 14.5833158493042,27.193000793457 8.42105293273926,29.7368431091309 8.42105293273926,14.4736843109131 14.5833158493042,11.9736843109131z M14.5833158493042,24.693000793457L20.548210144043,26.2281074523926 25.548210144043,22.8947372436523 30.5263175964355,24.3421058654785 30.5263175964355,14.2105264663696 25.4166316986084,12.807053565979 20.4166316986084,16.2719478607178 14.5833158493042,14.6053161621094 10.5263156890869,16.184211730957 10.5263156890869,26.3157901763916 14.5833158493042,24.693000793457z M29.3421058654785,21.5789489746094L27.9111595153809,21.5789489746094 26.8808441162109,19.5124740600586 26.8655815124512,19.5124740600586 26.7061004638672,19.8772239685059 26.3959445953369,20.4813365936279 25.8164749145508,21.5789489746094 24.3796844482422,21.5789489746094 26.0855274200439,18.9473686218262 24.5300540924072,16.3157901763916 25.9950523376465,16.3157901763916 26.9184741973877,18.3376312255859 26.9337368011475,18.3376312255859 27.1025924682617,17.9506912231445 27.3984966278076,17.3625297546387 27.9405288696289,16.3157901763916 29.2668972015381,16.3157901763916 27.6914749145508,18.9250526428223 29.3421058654785,21.5789489746094z M12.3684215545654,21.0526313781738L12.9266586303711,21.2838687896729 13.1578950881958,21.8421058654785 12.9266586303711,22.4003429412842 12.3684215545654,22.6315803527832 11.8101844787598,22.4003429412842 11.5789480209351,21.8421058654785 11.8101844787598,21.2838687896729 12.3684215545654,21.0526313781738z M13.4210529327393,18.4210529327393L13.9792900085449,18.6522903442383 14.2105264663696,19.2105274200439 13.9792900085449,19.768762588501 13.4210529327393,20 12.8628158569336,19.768762588501 12.6315793991089,19.2105274200439 12.8628158569336,18.6522903442383 13.4210529327393,18.4210529327393z M16.0526313781738,17.8947372436523L16.6108684539795,18.1259746551514 16.8421058654785,18.684211730957 16.6108684539795,19.2424468994141 16.0526313781738,19.4736843109131 15.4943952560425,19.2424468994141 15.2631587982178,18.684211730957 15.4943952560425,18.1259746551514 16.0526313781738,17.8947372436523z M17.6315803527832,20L18.1898155212402,20.231237411499 18.4210529327393,20.7894744873047 18.1898155212402,21.3477115631104 17.6315803527832,21.5789489746094 17.0733432769775,21.3477115631104 16.8421058654785,20.7894744873047 17.0733432769775,20.231237411499 17.6315803527832,20z M19.7368431091309,21.5789489746094L20.2950782775879,21.8101863861084 20.5263156890869,22.3684215545654 20.2950782775879,22.9266586303711 19.7368431091309,23.1578960418701 19.1786060333252,22.9266586303711 18.9473686218262,22.3684215545654 19.1786060333252,21.8101863861084 19.7368431091309,21.5789489746094z M23.4210529327393,18.4210529327393L23.9792900085449,18.6522903442383 24.2105274200439,19.2105274200439 23.9792900085449,19.768762588501 23.4210529327393,20 22.8628177642822,19.768762588501 22.6315803527832,19.2105274200439 22.8628177642822,18.6522903442383 23.4210529327393,18.4210529327393z M21.3157901763916,19.4736843109131L21.8740272521973,19.7049217224121 22.1052646636963,20.2631587982178 21.8740272521973,20.8213939666748 21.3157901763916,21.0526313781738 20.7575531005859,20.8213939666748 20.5263156890869,20.2631587982178 20.7575531005859,19.7049217224121 21.3157901763916,19.4736843109131z" />
+                    </AppBarButton.Icon>
+                </AppBarButton>
+                <AppBarButton Label="Clear"
+                              Click="ClearButton_OnClick">
+
+                </AppBarButton>
+            </CommandBar.PrimaryCommands>
+            <CommandBar.SecondaryCommands>
+                <AppBarButton Label="Back"
+                              Click="GoBack"/>
+            </CommandBar.SecondaryCommands>
+        </CommandBar>
+    </Page.BottomAppBar>
+    <Grid>
+        <ProgressRing Name="ProgressRing" Width="100" Height="100"></ProgressRing>
+        <Pivot>
+            <PivotItem>
+                <StackPanel>
+                    <TextBlock FontSize="32" 
+                               FontFamily="Segoe UI Light" 
+                               Foreground="DarkGray"
+                               Text="Saved points"
+                               Margin="0,0,0,20"/>
+                    <ListView Name="PointsList" 
+                              SelectionChanged="PointsList_OnSelectionChanged" 
+                              ItemsSource="{Binding Points}" 
+                              Height="485">
+                        <ListView.Resources>
+                            <DataTemplate x:Key="PointItemTemplate">
+                                <StackPanel>
+                                    <TextBlock Text="{Binding Title}" FontSize="24" FontFamily="SegoeUI"/>
+                                    <TextBlock Text="{Binding Description}" Foreground="DarkGray"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListView.Resources>
+                        <ListView.ItemTemplate>
+                            <StaticResource ResourceKey="PointItemTemplate" />
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackPanel>
+            </PivotItem>
+            <PivotItem>
+                <StackPanel>
+                    <TextBlock FontSize="32" 
+                               FontFamily="Segoe UI Light" 
+                               Foreground="DarkGray"
+                               Text="Caches nearby"
+                               Margin="0,0,0,15"/>
+                    <Button Name="RefreshButton" Click="RefreshButton_OnClick">Refresh</Button>
+                    <ListView Name="CachesList"
+                              SelectionChanged="CachesList_OnSelectionChanged"
+                              ItemsSource="{Binding CachesNearby}" 
+                              Height="430">
+                        <ListView.Resources>
+                            <DataTemplate x:Key="PointItemTemplate">
+                                <StackPanel>
+                                    <TextBlock Text="{Binding Name}" FontSize="24" FontFamily="Segoe UI"/>
+                                    <TextBlock Text="{Binding Type}" Foreground="DarkGray"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListView.Resources>
+                        <ListView.ItemTemplate>
+                            <StaticResource ResourceKey="PointItemTemplate" />
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackPanel>
+            </PivotItem>
+        </Pivot>
+        <Popup VerticalOffset="100" HorizontalOffset="10" Name="PointPopup">
+            <Border BorderBrush="{StaticResource ApplicationForegroundThemeBrush}" 
+                                Background="{StaticResource ApplicationPageBackgroundThemeBrush}"
+                                BorderThickness="2" Width="380" Height="290">
+                <StackPanel Margin="5">
+                    <TextBlock>Position (N;E deg min sec):</TextBlock>
+                    <TextBox Name="PointCoordinatesTextBox" />
+                    <TextBlock>Format:</TextBlock>
+                    <StackPanel Orientation="Horizontal">
+                        <RadioButton Name="DegMinFormatRB" GroupName="CoordFormat" IsChecked="True">x x.x</RadioButton>
+                        <RadioButton Name="DegFormatRB" GroupName="CoordFormat">x.x</RadioButton>
+                    </StackPanel>
+                    <TextBlock>Title:</TextBlock>
+                    <TextBox Name="PointDescriptionTextBox" />
+                    <StackPanel Orientation="Horizontal"
+                                HorizontalAlignment="Center">
+                        <Button Click="SetTargetClick" Margin="0 0 10 0">Set</Button>
+                        <Button Click="AddPointClick" Margin="0 0 10 0">Add</Button>
+                        <Button HorizontalAlignment="Center" Click="ClosePointPopup">Cancel</Button>
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+        </Popup>
+    </Grid>
+</Page>
