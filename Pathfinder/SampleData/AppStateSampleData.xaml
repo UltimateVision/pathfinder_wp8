@@ -1,0 +1,109 @@
+﻿<Pathfinder:AppState xmlns:Pathfinder="using:Pathfinder" xmlns:Model="using:Pathfinder.Model" xmlns:Geolocation="using:Windows.Devices.Geolocation">
+	<Pathfinder:AppState.CachesNearby>
+		<Model:Geocache Available="True" Difficulty="973.78" Date="05/01/2016 21:08:56" Id="Faucibus himenaeos" Name="Habitasse feugiat hendrerit dictum" Size="Malesuada lacinia libero adipiscing lorem" Terrain="602.66" Type="Iaculis per nunc lectus" Username="Gravida imperdiet non">
+			<Model:Geocache.Position>
+				<Geolocation:BasicGeoposition/>
+			</Model:Geocache.Position>
+		</Model:Geocache>
+		<Model:Geocache Available="False" Difficulty="323.98" Date="05/01/2016 21:08:56" Id="Interdum laoreet lobortis orci pede" Name="Habitant morbi odio inceptos" Size="Quis nulla penatibus porttitor" Terrain="328.18" Type="Litora nascetur natoque posuere" Username="Quam ligula">
+			<Model:Geocache.Position>
+				<Geolocation:BasicGeoposition/>
+			</Model:Geocache.Position>
+		</Model:Geocache>
+		<Model:Geocache Available="True" Difficulty="577.66" Date="05/01/2016 21:08:56" Id="Tristique potenti pretium" Name="Tincidunt sed luctus parturient proin" Size="Pharetra fames" Terrain="959.46" Type="Urna dolor ultricies rhoncus" Username="Augue sem">
+			<Model:Geocache.Position>
+				<Geolocation:BasicGeoposition/>
+			</Model:Geocache.Position>
+		</Model:Geocache>
+		<Model:Geocache Available="False" Difficulty="668.22" Date="05/01/2016 21:08:56" Id="Vulputate nunc placerat magnis sodales" Name="Venenatis cras duis" Size="Ipsum integer pulvinar quisque sit" Terrain="310.65" Type="Mauris aliquam" Username="Mattis felis viverra vestibulum">
+			<Model:Geocache.Position>
+				<Geolocation:BasicGeoposition/>
+			</Model:Geocache.Position>
+		</Model:Geocache>
+		<Model:Geocache Available="True" Difficulty="650.78" Date="05/01/2016 21:08:56" Id="Curabitur phasellus vel nam lorem" Name="Justo lacus mollis" Size="Adipiscing parturient" Terrain="389.38" Type="Consequat vivamus" Username="Amet vestibulum">
+			<Model:Geocache.Position>
+				<Geolocation:BasicGeoposition/>
+			</Model:Geocache.Position>
+		</Model:Geocache>
+		<Model:Geocache Available="False" Difficulty="686.54" Date="05/01/2016 21:08:56" Id="Vestibulum sagittis sed aliquam" Name="Magna convallis vestibulum ante" Size="Dignissim sociosqu suscipit torquent" Terrain="481.29" Type="Senectus dis" Username="Adipiscing montes parturient arcu">
+			<Model:Geocache.Position>
+				<Geolocation:BasicGeoposition/>
+			</Model:Geocache.Position>
+		</Model:Geocache>
+		<Model:Geocache Available="True" Difficulty="792.75" Date="05/01/2016 21:08:56" Id="Est platea metus morbi ultrices" Name="Massa nostra ornare" Size="Vestibulum eget elementum primis" Terrain="975.79" Type="Volutpat maecenas aliquet" Username="Diam neque netus vehicula">
+			<Model:Geocache.Position>
+				<Geolocation:BasicGeoposition/>
+			</Model:Geocache.Position>
+		</Model:Geocache>
+		<Model:Geocache Available="False" Difficulty="947.9" Date="05/01/2016 21:08:56" Id="Accumsan sapien adipiscing fermentum" Name="Rutrum praesent facilisis vestibulum" Size="Porta commodo conubia" Terrain="246.05" Type="Sociis nulla elit" Username="Bibendum semper parturient blandit">
+			<Model:Geocache.Position>
+				<Geolocation:BasicGeoposition/>
+			</Model:Geocache.Position>
+		</Model:Geocache>
+		<Model:Geocache Available="True" Difficulty="743.38" Date="05/01/2016 21:08:56" Id="Velit dapibus" Name="Purus risus cubilia vestibulum" Size="Habitasse hendrerit vestibulum class curae" Terrain="672.28" Type="Erat fringilla vitae eleifend" Username="Dictumst enim">
+			<Model:Geocache.Position>
+				<Geolocation:BasicGeoposition/>
+			</Model:Geocache.Position>
+		</Model:Geocache>
+		<Model:Geocache Available="False" Difficulty="713.11" Date="05/01/2016 21:08:56" Id="Taciti himenaeos euismod" Name="Adipiscing egestas" Size="Tempor iaculis tempus hac tortor" Terrain="809.98" Type="Donec eros imperdiet parturient" Username="Tellus feugiat gravida">
+			<Model:Geocache.Position>
+				<Geolocation:BasicGeoposition/>
+			</Model:Geocache.Position>
+		</Model:Geocache>
+	</Pathfinder:AppState.CachesNearby>
+	<Pathfinder:AppState.Points>
+		<Model:Point Description="Adipiscing duis nunc amet maecenas" Title="Class cras vestibulum aliquam">
+			<Model:Point.Position>
+				<Geolocation:BasicGeoposition/>
+			</Model:Point.Position>
+		</Model:Point>
+		<Model:Point Description="Quisque aenean" Title="Praesent integer ante">
+			<Model:Point.Position>
+				<Geolocation:BasicGeoposition/>
+			</Model:Point.Position>
+		</Model:Point>
+		<Model:Point Description="Parturient sed consequat arcu" Title="Curabitur phasellus curae vivamus nam">
+			<Model:Point.Position>
+				<Geolocation:BasicGeoposition/>
+			</Model:Point.Position>
+		</Model:Point>
+		<Model:Point Description="Accumsan mauris vestibulum aliquet" Title="Aliquam vestibulum">
+			<Model:Point.Position>
+				<Geolocation:BasicGeoposition/>
+			</Model:Point.Position>
+		</Model:Point>
+		<Model:Point Description="Commodo parturient dis convallis" Title="Blandit adipiscing donec">
+			<Model:Point.Position>
+				<Geolocation:BasicGeoposition/>
+			</Model:Point.Position>
+		</Model:Point>
+		<Model:Point Description="Hac vestibulum adipiscing etiam" Title="Vestibulum est diam">
+			<Model:Point.Position>
+				<Geolocation:BasicGeoposition/>
+			</Model:Point.Position>
+		</Model:Point>
+		<Model:Point Description="Elit vestibulum dictumst dignissim eleifend" Title="Nullam parturient eget fusce bibendum">
+			<Model:Point.Position>
+				<Geolocation:BasicGeoposition/>
+			</Model:Point.Position>
+		</Model:Point>
+		<Model:Point Description="Cubilia leo aptent facilisi enim" Title="Conubia elementum">
+			<Model:Point.Position>
+				<Geolocation:BasicGeoposition/>
+			</Model:Point.Position>
+		</Model:Point>
+		<Model:Point Description="Fermentum nibh egestas euismod" Title="Facilisis erat dapibus eros">
+			<Model:Point.Position>
+				<Geolocation:BasicGeoposition/>
+			</Model:Point.Position>
+		</Model:Point>
+		<Model:Point Description="Nec vestibulum nisl cursus" Title="Auctor mus fringilla nisi congue">
+			<Model:Point.Position>
+				<Geolocation:BasicGeoposition/>
+			</Model:Point.Position>
+		</Model:Point>
+	</Pathfinder:AppState.Points>
+	<Pathfinder:AppState.Target>
+		<Geolocation:BasicGeoposition/>
+	</Pathfinder:AppState.Target>
+</Pathfinder:AppState>

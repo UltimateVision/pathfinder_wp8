@@ -48,14 +48,17 @@ namespace Pathfinder
             await Launch(async () => {
                 Frame rootFrame = Window.Current.Content as Frame;
                 Debug.WriteLine("Files count:" + args.Files.Count);
-                if (args.Files.Count > 0)
-                {
+                if (args.Files.Count > 0) {
                     Debug.WriteLine(args.Files[0].Name);
                     StorageFile file = args.Files[0] as StorageFile;
                     var read = await FileIO.ReadTextAsync(file);
                     KmlDocument kd = new KmlDocument(read);
 
-                    if (rootFrame != null && !rootFrame.Navigate(typeof(CacheList), kd))
+                    if (rootFrame != null && !rootFrame.Navigate(typeof (CacheList), kd)) {
+                        throw new Exception("Failed to create initial page");
+                    }
+                } else {
+                    if (rootFrame != null && !rootFrame.Navigate(typeof(MainPage)))
                     {
                         throw new Exception("Failed to create initial page");
                     }
